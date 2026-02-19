@@ -3,8 +3,10 @@ import fs from "fs";
 import { DatabaseSync } from "node:sqlite";
 import path from "path";
 import { fileURLToPath } from "url";
+import cors from "cors";
 
 const app = express();
+app.use(cors());
 app.use(express.json());
 
 // ----------------------------
@@ -31,12 +33,6 @@ app.use((req, res, next) => {
 // ----------------------------
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-
-// ----------------------------
-// Serve Frontend
-// ----------------------------
-const distPath = path.join(__dirname, "frontend", "dist");
-app.use(express.static(distPath));
 
 // ----------------------------
 // Load schema.json
@@ -223,13 +219,6 @@ app.delete(`/${table_name}/:id`, (req, res, next) => {
     errorLog("DELETE failed:", err);
     next(err);
   }
-});
-
-// ============================
-// SPA FALLBACK
-// ============================
-app.use((req, res) => {
-  res.sendFile(path.join(distPath, "index.html"));
 });
 
 // ============================

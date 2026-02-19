@@ -1,0 +1,47 @@
+.ProseMirror {
+    height: 100%;
+    padding: 10px;
+    font-size: 16px;
+}
+
+/* ===== XP TOOLBAR ===== */
+.xp-toolbar {
+  display: flex;
+  gap: 4px;
+  padding: 4px;
+  background: #ECE9D8;
+  border-bottom: 1px solid #7F9DB9;
+  font-family: Tahoma, sans-serif;
+}
+
+/* XP Button */
+.xp-button {
+  padding: 2px 8px;
+  background: #ECE9D8;
+  border-top: 2px solid #ffffff;
+  border-left: 2px solid #ffffff;
+  border-right: 2px solid #404040;
+  border-bottom: 2px solid #404040;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.xp-button:active,
+.xp-button.active {
+  border-top: 2px solid #404040;
+  border-left: 2px solid #404040;
+  border-right: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+}
+
+/* XP Select */
+.xp-select {
+  background: white;
+  border-top: 2px solid #7F9DB9;
+  border-left: 2px solid #7F9DB9;
+  border-right: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+  font-family: Tahoma, sans-serif;
+  font-size: 13px;
+  padding: 2px;
+}

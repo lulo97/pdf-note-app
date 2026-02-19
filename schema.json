@@ -1,4 +1,4 @@
 {
   "table_name": "notes",
-  "columns": ["id", "text", "note", "createdat", "updatedat"]
+  "columns": ["id", "title", "content", "createdat", "updatedat"]
 }

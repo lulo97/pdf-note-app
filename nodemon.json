@@ -1,0 +1,6 @@
+{
+  "watch": ["."],
+  "ext": "js,jsx",
+  "ignore": ["dist/", "node_modules/"],
+  "exec": "npm run dev"
+}
